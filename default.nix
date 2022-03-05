@@ -9,15 +9,15 @@ let
   };
   luvi = stdenv.mkDerivation rec {
     name = "luvi-${version}";
-    version = "2.11.0";
+    version = "2.13.0";
 
     src = fetchFromGitHub {
       owner = "luvit";
       repo = "luvi";
-      rev = "473a70e76ebb6d337f529db4f57507ca3dee04ba";
+      rev = "2be5441f6d85dbb81cb4b37bc67a58a89901e866";
       fetchSubmodules = true;
-      sha256 = "1m3az9sb9rj9p4iisy6x6bnhsflns2pkml1g94a6xf1pwbfbsg2f";
-      # date = 2020-05-08T12:02:57-05:00;
+      sha256 = "0326lxr3z0cl00gpjsnxyvfgwzdaxnbjrx8qm0l70pxxzydxvmc7";
+      # release from Oct 20, 2021
     };
 
     buildInputs = [ cmake openssl ];
@@ -57,15 +57,15 @@ let
 
   lit = stdenv.mkDerivation rec {
     name = "lit-${version}";
-    version = "3.8.1";
+    version = "3.8.5";
 
     src = fetchFromGitHub {
       owner = "luvit";
       repo = "lit";
-      rev = "3bf3517b6efd08fd6bae12fd83707535a4a9d4af";
+      rev = "84fc5d729f1088b3b93bc9a55d1f7a245bca861d";
       fetchSubmodules = true;
-      sha256 = "0lk8ac6ds3p2lfmb1mz1px0jjv6adlszsxm3j8g0z8if7nc41ba0";
-      # date = 2020-03-09T01:43:33-07:00;
+      sha256 = "191fxini7k6a5rvv62aqndpw954a17qii8krc3dqyj6dh26bap7h";
+      # release from Jun 25, 2021
     };
 
     buildInputs = [ luvi strace ];
@@ -107,14 +107,14 @@ let
   luvit = makeLitPackage rec {
     name = "luvit-${version}";
     pname = "luvit";
-    version = "2.17.0";
+    version = "2.18.1";
 
     src = fetchFromGitHub {
       owner = "luvit";
       repo = "luvit";
-      rev = "788e0fb20b2f897f4624ac9290230060609cef50";
-      sha256 = "0x8z3r88197bcl9bnwp3rrsw2px9cb1js1xpw0pvrfc76lg56qmj";
-      # date = 2020-05-09T16:11:21+08:00;
+      rev = "b7d27154429471da42c83a6be355572cfa319772";
+      sha256 = "06yp31igdxmnfga9gn7z0n5sdbr5p69vd8saj16b6ifl45zg66wz";
+      # release from Nov 18, 2021
     };
 
     meta = {
